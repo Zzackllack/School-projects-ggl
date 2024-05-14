@@ -1,0 +1,8 @@
+public class A11_CountdownCe {
+  public static void main(String[] args) {
+      int startzahl = 10;
+    for ( int i=startzahl; i>=0 ;i-- ) {
+        System.out.println(i);
+      } // end of for
+  }
+}
