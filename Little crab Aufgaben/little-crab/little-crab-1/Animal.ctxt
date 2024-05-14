@@ -1,0 +1,26 @@
+#BlueJ class context
+comment0.target=Animal
+comment1.params=
+comment1.target=void\ act()
+comment2.params=
+comment2.target=void\ move()
+comment2.text=\r\n\ Bewegt\ sich\ geradeaus\ (in\ der\ derzeitigen\ Richtung).\r\n
+comment3.params=angle
+comment3.target=void\ turn(int)
+comment3.text=\r\n\ \u00C4ndert\ die\ Richtung\ um\ den\ angegebenen\ Winkel\ im\ Uhrzeigersinn.\r\n
+comment4.params=
+comment4.target=void\ randomTurn()
+comment4.text=\r\n\ \u00C4ndert\ die\ Richtung\ zuf\u00E4llig.\r\n
+comment5.params=
+comment5.target=boolean\ atWorldEdge()
+comment5.text=\r\n\ Testet,\ ob\ das\ Tier\ sich\ am\ Rand\ der\ Welt\ befindet\ (R\u00FCckgabe\ "true",\ wenn\ das\ der\ Fall\ ist).\r\n
+comment6.params=klasse
+comment6.target=boolean\ canSee(java.lang.Class)
+comment6.text=\r\n\ Gibt\ "true"\ zur\u00FCck,\ wenn\ ein\ Tier\ der\ angegebenen\ Klasse\ zu\ sehen\ ist,\ und\ "false",\ wenn\ nicht.\ \r\n
+comment7.params=klasse
+comment7.target=void\ eat(java.lang.Class)
+comment7.text=\r\n\ Frisst\ ein\ Tier\ der\ angegebenen\ Klasse.\r\n
+comment8.params=
+comment8.target=void\ stopGame()
+comment8.text=\r\n\ Stoppt\ die\ Simulation\ (das\ Spiel).\r\n
+numComments=9
