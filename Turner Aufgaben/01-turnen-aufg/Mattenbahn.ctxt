@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.target=Mattenbahn
+comment0.text=\r\n\ @author\ \ (volker\ lange)\ \r\n\ @version\ (dezember\ 2009)\r\n
+comment1.params=
+comment1.target=Mattenbahn()
+comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ "Mattenbahn".\r\n\ \r\n
+comment2.params=
+comment2.target=void\ populateWorld()
+comment2.text=\r\n\ Create\ the\ objects\ for\ the\ start.\r\n
+numComments=3

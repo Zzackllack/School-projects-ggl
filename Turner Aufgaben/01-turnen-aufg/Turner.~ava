@@ -1,0 +1,159 @@
+import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+import java.util.List;
+import java.util.LinkedList;
+
+/**
+ * Die Klasse Turner enthält verschiedene Turnübungen, die der Turner ausführen kann.
+ * 
+ * @author (volker lange) 
+ * @version (30.12.2009)
+ */
+public class Turner extends Actor
+{
+    List rolleVorwaertsImg    = new LinkedList();
+    List rolleRueckwaertsImg  = new LinkedList();
+    List radImg               = new LinkedList();
+    List ueberschlagImg       = new LinkedList();
+    List uebungsTeil          = new LinkedList();
+    int step=0;
+    int uebungsTeilNr=1;
+
+    public Turner()
+    {
+        rolleVorwaertsImg.add(new GreenfootImage("rolle1.png"));
+        rolleVorwaertsImg.add(new GreenfootImage("rolle2.png"));
+        rolleVorwaertsImg.add(new GreenfootImage("rolle3.png"));
+        rolleVorwaertsImg.add(new GreenfootImage("rolle4.png"));
+        rolleVorwaertsImg.add(new GreenfootImage("rolle5.png"));
+        rolleVorwaertsImg.add(new GreenfootImage("strecksprung2.png"));
+        rolleVorwaertsImg.add(new GreenfootImage("stand.png"));
+        rolleRueckwaertsImg.add(new GreenfootImage("rolleRw1.png"));
+        rolleRueckwaertsImg.add(new GreenfootImage("rolleRw2.png"));
+        rolleRueckwaertsImg.add(new GreenfootImage("rolleRw3.png"));
+        rolleRueckwaertsImg.add(new GreenfootImage("rolleRw4.png"));
+        rolleRueckwaertsImg.add(new GreenfootImage("rolleRw5.png"));
+        rolleRueckwaertsImg.add(new GreenfootImage("rolleRw6.png"));
+        rolleRueckwaertsImg.add(new GreenfootImage("rolleRw7.png"));
+        rolleRueckwaertsImg.add(new GreenfootImage("rolleRw8.png"));
+        rolleRueckwaertsImg.add(new GreenfootImage("stand.png"));
+        radImg.add(new GreenfootImage("stand.png"));
+        radImg.add(new GreenfootImage("rad1.png"));
+        radImg.add(new GreenfootImage("rad2.png"));
+        radImg.add(new GreenfootImage("rad3.png"));
+        radImg.add(new GreenfootImage("rad4.png"));
+        radImg.add(new GreenfootImage("rad5.png"));
+        radImg.add(new GreenfootImage("rad6.png"));
+        radImg.add(new GreenfootImage("stand.png"));
+        ueberschlagImg.add(new GreenfootImage("ueberschlag7.png"));
+        ueberschlagImg.add(new GreenfootImage("ueberschlag1.png"));
+        ueberschlagImg.add(new GreenfootImage("ueberschlag2.png"));
+        ueberschlagImg.add(new GreenfootImage("ueberschlag3.png"));
+        ueberschlagImg.add(new GreenfootImage("ueberschlag4.png"));
+        ueberschlagImg.add(new GreenfootImage("ueberschlag5.png"));
+        ueberschlagImg.add(new GreenfootImage("ueberschlag6.png"));
+        ueberschlagImg.add(new GreenfootImage("ueberschlag7.png"));
+    }
+
+   /**
+    * Turnen der Vorwärtsrolle. 
+    * Es muss übergeben werden, die wievielte Teilübung dieses Element in der Bodenkür ist
+    */    
+    public void rolleVorwaerts(int ueTeil)
+    {
+        if( uebungsTeilNr==ueTeil)
+        {
+          if( step<rolleVorwaertsImg.size() )
+          {
+            this.setImage((GreenfootImage)rolleVorwaertsImg.get(step));
+            if(step<2)this.setLocation(getX()+10,getY());
+            else if(step<5)this.setLocation(getX()+30,getY());
+            step++;
+          }
+          if( step==rolleVorwaertsImg.size() )
+          {
+            step=0;
+            uebungsTeilNr++;
+          } 
+       }
+    }
+
+   /**
+    * Turnen der Rückwärtsrolle. 
+    * Es muss übergeben werden, die wievielte Teilübung dieses Element in der Bodenkür ist
+    */    
+    public void rolleRueckwaerts(int ueTeil)
+    {
+        if( uebungsTeilNr==ueTeil)
+        {
+          if( step<rolleRueckwaertsImg.size() )
+          {
+            this.setImage((GreenfootImage)rolleRueckwaertsImg.get(step));
+            if(step==1 || step==2 || step==3 || step==4 || step==6) this.setLocation(getX()-20,getY());
+            else if(step==5) this.setLocation(getX()-40,getY());
+            step++;
+          }
+          if( step==rolleVorwaertsImg.size() )
+          {
+            step=0;
+            uebungsTeilNr++;
+          }
+       }
+    }
+
+   /**
+    * Turnen des Rades. 
+    * Es muss übergeben werden, die wievielte Teilübung dieses Element in der Bodenkür ist
+    */    
+    public void rad(int ueTeil)
+    {
+        if( uebungsTeilNr==ueTeil)
+        {
+          if( step<radImg.size() )
+          {
+           this.setImage((GreenfootImage)radImg.get(step));
+            if(step>0) this.setLocation(getX()+30,getY());
+            step++;
+          }
+          if( step==radImg.size() )
+          {
+            step=0;
+            uebungsTeilNr++;
+          }
+       }
+    }
+
+
+   /**
+    * Turnen des Handstandüberschlags. 
+    * Es muss übergeben werden, die wievielte Teilübung dieses Element in der Bodenkür ist
+    */    
+    public void ueberschlag(int ueTeil)
+    {
+        if( uebungsTeilNr==ueTeil)
+        {
+          if( step<ueberschlagImg.size() )
+          {
+            this.setImage((GreenfootImage)ueberschlagImg.get(step));
+            if(step==7 || step==1) this.setLocation(getX()+20,getY());
+            else if(step>0) this.setLocation(getX()+40,getY());
+            step++;
+          }
+          if( step==ueberschlagImg.size() )
+          {
+            step=0;
+            uebungsTeilNr++;
+          }
+       }
+    }
+
+   /**
+    * Beenden einer Turnübung. 
+    * Es muss übergeben werden, die wievielte Teilübung dieses Element in der Bodenkür ist
+    */    
+    public void ende(int ueAnzahl)
+    {
+        if(uebungsTeilNr>ueAnzahl) Greenfoot.stop();
+    }
+
+
+}

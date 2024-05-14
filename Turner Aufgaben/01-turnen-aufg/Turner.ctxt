@@ -1,0 +1,21 @@
+#BlueJ class context
+comment0.target=Turner
+comment0.text=\r\n\ Die\ Klasse\ Turner\ enth\u00E4lt\ verschiedene\ Turn\u00FCbungen,\ die\ der\ Turner\ ausf\u00FChren\ kann.\r\n\ \r\n\ @author\ \ (volker\ lange)\ \r\n\ @version\ (dezember\ 2009)\r\n
+comment1.params=
+comment1.target=Turner()
+comment2.params=ueTeil
+comment2.target=void\ rolleVorwaerts(int)
+comment2.text=\r\n\ Turnen\ der\ Vorw\u00E4rtsrolle.\ \r\n\ Es\ muss\ \u00FCbergeben\ werden,\ die\ wievielte\ Teil\u00FCbung\ dieses\ Element\ in\ der\ Bodenk\u00FCr\ ist\r\n
+comment3.params=ueTeil
+comment3.target=void\ rolleRueckwaerts(int)
+comment3.text=\r\n\ Turnen\ der\ R\u00FCckw\u00E4rtsrolle.\ \r\n\ Es\ muss\ \u00FCbergeben\ werden,\ die\ wievielte\ Teil\u00FCbung\ dieses\ Element\ in\ der\ Bodenk\u00FCr\ ist\r\n
+comment4.params=ueTeil
+comment4.target=void\ rad(int)
+comment4.text=\r\n\ Turnen\ des\ Rades.\ \r\n\ Es\ muss\ \u00FCbergeben\ werden,\ die\ wievielte\ Teil\u00FCbung\ dieses\ Element\ in\ der\ Bodenk\u00FCr\ ist\r\n
+comment5.params=ueTeil
+comment5.target=void\ ueberschlag(int)
+comment5.text=\r\n\ Turnen\ des\ Handstand\u00FCberschlags.\ \r\n\ Es\ muss\ \u00FCbergeben\ werden,\ die\ wievielte\ Teil\u00FCbung\ dieses\ Element\ in\ der\ Bodenk\u00FCr\ ist\r\n
+comment6.params=ueAnzahl
+comment6.target=void\ ende(int)
+comment6.text=\r\n\ Beenden\ einer\ Turn\u00FCbung.\ \r\n\ Es\ muss\ \u00FCbergeben\ werden,\ die\ wievielte\ Teil\u00FCbung\ dieses\ Element\ in\ der\ Bodenk\u00FCr\ ist\r\n
+numComments=7
