@@ -20,7 +20,7 @@ To run these projects locally, you will need a Java Development Kit (JDK) and an
 ### Installation
 1. Clone the repository:
    ```sh
-   git clone https://github.com/Zzackllack/javaschoolprojects.git
+   git clone https://github.com/Zzackllack/Java-school-projects.git
 2. Open the project in your IDE:
 - Import the project using the IDE's import feature.
 - Build the project to resolve dependencies.
