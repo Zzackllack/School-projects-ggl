@@ -5,10 +5,13 @@ This repository, `javaschoolprojects`, is dedicated to storing all kinds of scho
 
 ## Projects Included
 This repository will be updated with various Java projects related to school assignments and educational exercises.
-- Console-based applications for problem-solving
+- Console-based applications for (problem-solving)
 
 ## Technologies Used
 - Java
+- Visual Code Studio
+- IntellJ Idea
+- Java editor (my teacher forced me)
 
 ## Getting Started
 To run these projects locally, you will need a Java Development Kit (JDK) and an Integrated Development Environment (IDE) that supports Java.
