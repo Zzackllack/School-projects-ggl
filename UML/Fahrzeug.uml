@@ -1,0 +1,54 @@
+﻿[Files]
+File0=Auto.java
+File1=Fahrzeug.java
+File2=Strasse.java
+
+[Box:  - Auto]
+X=499
+Y=131
+MinVis=0
+ShowParameter=4
+SortOrder=0
+ShowIcons=1
+FontSize=12
+FontName=Segoe UI
+
+[Box:  - Fahrzeug]
+X=70
+Y=41
+MinVis=0
+ShowParameter=4
+SortOrder=0
+ShowIcons=1
+FontSize=12
+FontName=Segoe UI
+
+[Box:  - Strasse]
+X=788
+Y=168
+MinVis=0
+ShowParameter=4
+SortOrder=0
+ShowIcons=1
+FontSize=12
+FontName=Segoe UI
+
+[Diagram]
+comments=0
+OffsetX=0
+OffsetY=0
+Visibility=0
+ShowParameter=4
+SortOrder=0
+ShowIcons=1
+ShowConnections=0
+Fontname=Segoe UI
+Fontsize=12
+ShowObjectDiagram=0
+
+[Connections]
+V0=Auto#Fahrzeug#Inheritends####0#0#0###0#0
+
+[Interactive]
+I0=
+
