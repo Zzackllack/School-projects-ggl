@@ -2,20 +2,24 @@
  *
  * Description
  *
- * @version 1.0 from 17.05.2024
+ * @version 1.0 from 21.05.2024
  * @author 
  */
 
 public class Auto extends Fahrzeug {
   
-  // start attributes
   private String marke;
-  // end attributes
   
-  // start methods
+  public Auto(String marke, int speed, int maxSpeed, int tank, int maxTank) {
+    super(speed, tank, maxSpeed, maxTank);
+    this.marke = marke;
+  }
+
   public String getMarke() {
     return marke;
   }
 
-  // end methods
-} // end of Auto
+  public void setMarke(String marke) {
+    this.marke = marke;
+  }
+}
