@@ -2,7 +2,7 @@
  *
  * Description
  *
- * @version 1.0 from 17.05.2024
+ * @version 1.0 from 21.05.2024
  * @author 
  */
 
@@ -15,7 +15,7 @@ public class Fahrzeug {
   private int maxTank;
   // end attributes
   
-  public Fahrzeug(int speed, int tank, int maxTank, int maxSpeed) {
+  public Fahrzeug(int speed, int tank, int maxSpeed, int maxTank) {
     this.speed = speed;
     this.tank = tank;
     this.maxSpeed = maxSpeed;
@@ -57,27 +57,3 @@ public class Fahrzeug {
 
   // end methods
 } // end of Fahrzeug
-/**
- *
- * Description
- *
- * @version 1.0 from 17.05.2024
- * @author 
- */
-
-class Auto extends Fahrzeug {
-  
-  // start attributes1
-  // end attributes1
-  
-  public Fahrzeug(int speed, int tank, int maxTank, int maxSpeed) {
-  }
-
-  public Fahrzeug() {
-    this.speed = 0;
-    this.int = 0;
-  }
-
-  // start methods1
-  // end methods1
-} // end of Auto
