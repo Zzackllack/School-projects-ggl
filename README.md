@@ -8,10 +8,11 @@ This repository will be updated with various Java projects related to school ass
 - Console-based applications for (problem-solving)
 
 ## Technologies Used
-- Java
-- Visual Code Studio
+- Java (as a programmmin language)
+- Visual Code Studio (or VS = Visual Studio)
 - IntellJ Idea
-- Java editor (my teacher forced me)
+- Java editor (my teacher forced me to use it)
+- or any oder IDE/Code editor
 
 ## Getting Started
 To run these projects locally, you will need a Java Development Kit (JDK) and an Integrated Development Environment (IDE) that supports Java.
