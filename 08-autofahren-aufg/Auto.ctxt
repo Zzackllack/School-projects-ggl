@@ -1,0 +1,15 @@
+#BlueJ class context
+comment0.target=Auto
+comment1.params=
+comment1.target=Auto()
+comment2.params=
+comment2.target=void\ act()
+comment3.params=
+comment3.target=void\ fahren()
+comment4.params=
+comment4.target=void\ tanken()
+comment5.params=
+comment5.target=int\ berechneZeigerY()
+comment6.params=millisekunden
+comment6.target=void\ autoAnhalten(int)
+numComments=7
