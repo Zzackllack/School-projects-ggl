@@ -18,7 +18,7 @@ This repository will be updated with various Java projects related to school ass
 To run these projects locally, you will need a Java Development Kit (JDK) and an Integrated Development Environment (IDE) that supports Java.
 
 ### Prerequisites
-- Java Development Kit (JDK) 8 or higher
+- Java Development Kit (JDK) 8 or higher (I honestly don't knwo wich JDK is required but I thought JDK would be the go to)
 - An IDE like IntelliJ IDEA, Eclipse, or NetBeans
 
 ### Installation
