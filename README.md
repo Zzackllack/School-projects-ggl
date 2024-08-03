@@ -12,10 +12,9 @@ This repository will be updated with various Java projects related to school ass
 - Visual Code Studio (or VS = Visual Studio)
 - IntellJ Idea
 - Java editor (my teacher forced me to use it)
-- or any oder IDE/Code editor
-
+  
 ## Getting Started
-To run these projects locally, you will need a Java Development Kit (JDK) and an Integrated Development Environment (IDE) that supports Java.
+To run these projects locally, you will need a Java Development Kit (JDK) or/and Java Runtime Environment (JRE), an Integrated Development Environment (IDE) that supports Java.
 
 ### Prerequisites
 - Java Development Kit (JDK) 8 or higher (I honestly don't knwo wich JDK is required but I thought JDK would be the go to)
