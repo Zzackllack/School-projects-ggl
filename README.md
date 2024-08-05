@@ -8,7 +8,7 @@ This repository will be updated with various Java projects related to school ass
 - Console-based applications for (problem-solving)
 
 ## Technologies Used
-- Java (as a programmmin language)
+- Java
 - Visual Code Studio 
 - IntellJ Idea
 - Java editor
