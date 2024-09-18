@@ -7,7 +7,8 @@ public class ArrayTest {
             System.out.println(namen[i]);
         }
 
-        int[] numbers = {1, 2, 3, 4, 5};
-        System.out.println(numbers[2]);
+        for (String name : namen) {
+            System.out.println(name);
+        }
     }
 }

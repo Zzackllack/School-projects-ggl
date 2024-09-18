@@ -1,4 +1,3 @@
-// Suggested code may be subject to a license. Learn more: ~LicenseLog:256002193.
 public class Pizzatest {
     public static void main (String[] args){
 
