@@ -1,21 +1,21 @@
 public class Taxi {
-    private String fahrerNachname;
-    private String kennzeichen;
+    private String FahrerNachname;
+    private String Kennzeichen;
 
     public String getFahrerNachname() {
-        return fahrerNachname;
+        return FahrerNachname;
     }
 
-    public void setFahrerNachname(String fahrerNachname) {
-        this.fahrerNachname = fahrerNachname;
+    public void setFahrerNachname(String FahrerNachname) {
+        this.FahrerNachname = FahrerNachname;
     }
 
     public String getKennzeichen() {
-        return kennzeichen;
+        return Kennzeichen;
     }
 
-    public void setKennzeichen(String kennzeichen) {
-        this.kennzeichen = kennzeichen;
+    public void setKennzeichen(String Kennzeichen) {
+        this.Kennzeichen = Kennzeichen;
     }
 
 }
