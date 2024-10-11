@@ -12,6 +12,7 @@ This repository will be updated with various Java projects related to school ass
 - Java Basics: The first programs and tasks done in Java
 - Little crab Aufgaben/little-crab: A little game about a crab. Written in Greenfoot via Java
 - Sek 2: Stores all Kind of Tasks/Programs done in the 'Sekundarstuffe 2'
+- Testsachen: Includes different programs for testing purposes
 
 ## Technologies Used
 - Java
