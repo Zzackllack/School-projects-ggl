@@ -7,11 +7,15 @@ This repository, `Java-school-projects`, is dedicated to storing all kinds of sc
 This repository will be updated with various Java projects related to school assignments and educational exercises.
 - Console-based applications for (problem-solving)
 
+## What the different folders include
+- 08-autofahren-aufg: OOP Task, done via Greenfoot
+
 ## Technologies Used
 - Java
 - Visual Code Studio 
 - IntellJ Idea
 - Java editor
+- Greenfoot
   
 ## Getting Started
 To run these projects locally, you will need a Java Development Kit (JDK) or/and Java Runtime Environment (JRE), an Integrated Development Environment (IDE) that supports Java.
