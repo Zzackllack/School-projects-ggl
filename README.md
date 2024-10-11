@@ -9,6 +9,7 @@ This repository will be updated with various Java projects related to school ass
 
 ## What the different folders include
 - 08-autofahren-aufg: OOP Task, done via Greenfoot
+- Java Basics: The first programs and tasks done in Java
 
 ## Technologies Used
 - Java
