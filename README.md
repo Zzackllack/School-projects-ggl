@@ -14,6 +14,7 @@ This repository will be updated with various Java projects related to school ass
 - Sek 2: Stores all Kind of Tasks/Programs done in the 'Sekundarstuffe 2'
 - Testsachen: Includes different programs for testing purposes
 - Turner Aufgaben/01-turnen-aufg: Another OOP task done in Greenfoot
+- UML: Includes diverse Unified Modeling Language Diagrams for showcasing, etc.
 
 ## Technologies Used
 - Java
