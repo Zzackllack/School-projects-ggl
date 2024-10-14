@@ -1,4 +1,4 @@
-public class ACMEBicycle implements Bicyle {
+public class ACMEBicycle implements Bicycle {
     int cadence = 0;
     int speed = 0;
     int gear = 1;
