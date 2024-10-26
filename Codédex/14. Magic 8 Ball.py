@@ -22,3 +22,5 @@ elif num == 8:
     print('Outlook not so good.')
 elif num == 9:
     print('Very doubtful.')
+else:
+    print('Error')
