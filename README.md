@@ -8,6 +8,7 @@ This repository will be updated with various Java projects related to school ass
 - Console-based applications for (problem-solving)
 
 ## What the different folders include
+- Codédex: Includes different programming courses I am currently working on
 - 08-autofahren-aufg: OOP Task, done via Greenfoot
 - Java Basics: The first programs and tasks done in Java
 - Little crab Aufgaben/little-crab: A little game about a crab. Written in Greenfoot via Java
