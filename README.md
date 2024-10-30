@@ -12,7 +12,7 @@ This repository will be updated with various Java projects related to school ass
 - 08-autofahren-aufg: OOP Task, done via Greenfoot
 - Java Basics: The first programs and tasks done in Java
 - Little crab Aufgaben/little-crab: A little game about a crab. Written in Greenfoot via Java
-- Sek 2: Stores all Kind of Tasks/Programs done in the 'Sekundarstuffe 2'
+- Sek 2: Stores all Kind of Tasks/Programs done in the 'Sekundarstufe 2'
 - Testsachen: Includes different programs for testing purposes
 - Turner Aufgaben/01-turnen-aufg: Another OOP task done in Greenfoot
 - UML: Includes diverse Unified Modeling Language Diagrams for showcasing, etc.
