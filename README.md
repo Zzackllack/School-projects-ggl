@@ -26,7 +26,9 @@ To run these projects locally, you will need a Java Development Kit (JDK) or/and
 
 ### Prerequisites
 - Java Development Kit (JDK) or JRE
-- An IDE like IntelliJ IDEA, Eclipse, or NetBeans
+- Python 3.10+
+- An IDE like IntelliJ IDEA, Eclipse, or NetBeans for Java
+- An IDE for Python
 
 ### Installation
 1. Clone the repository:
