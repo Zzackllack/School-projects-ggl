@@ -18,11 +18,8 @@ This repository will be updated with various Java projects related to school ass
 - UML: Includes diverse Unified Modeling Language Diagrams for showcasing, etc.
 
 ## Technologies Used
-- Java
-- Visual Code Studio 
-- IntellJ Idea
-- Java editor
-- Greenfoot
+- Java / Python
+- Visual Code Studio / IntellJ Idea / Pycharm / Java editor / Eclipse / Greenfoot
   
 ## Getting Started
 To run these projects locally, you will need a Java Development Kit (JDK) or/and Java Runtime Environment (JRE), an Integrated Development Environment (IDE) that supports Java.
