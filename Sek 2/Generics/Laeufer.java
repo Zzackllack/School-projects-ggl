@@ -1,43 +1,39 @@
 public class Laeufer {
     private String name;
-	private int alter;
-	private boolean laeufer;
+    private int alter;
+    private boolean laeufer;
 
-	public String getName() {
-		// TODO Auto-generated method stub
-		return name;
-	}
-	
-	public void setName(String name) {
-		 this.name = name;
-	}
+    public Laeufer(String name, int alter, boolean laeufer) {
+        this.name = name;
+        this.alter = alter;
+        this.laeufer = laeufer;
+    }
 
-	public boolean isQuali() {
-		if(laeufer == true) {
-			return true;
-		}
-		else {
-			return false;
-		}
-	}
+    public String getName() {
+        return name;
+    }
 
-	public int getAlter() {
-		return alter;
-	}
+    public void setName(String name) {
+        this.name = name;
+    }
 
-	public void setAlter(int alter) {
-		this.alter = alter;
-	}
+    public boolean isQuali() {
+        return laeufer;
+    }
 
-	public boolean isLaeufer() {
-		return laeufer;
-	}
+    public int getAlter() {
+        return alter;
+    }
 
-	public void setLaeufer(boolean laeufer) {
-		this.laeufer = laeufer;
-	}
+    public void setAlter(int alter) {
+        this.alter = alter;
+    }
 
-	public Laeufer(String name, int alter, boolean laeufer) {
-		// TODO Auto-generated constructor stub
-	}
+    public boolean isLaeufer() {
+        return laeufer;
+    }
+
+    public void setLaeufer(boolean laeufer) {
+        this.laeufer = laeufer;
+    }
 }
