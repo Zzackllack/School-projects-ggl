@@ -1,4 +1,4 @@
-public class Fibonacci {
+public class FibonacciRedundant {
     
     public int fibonacci(int n) {
         if(n==0) {
@@ -13,7 +13,8 @@ public class Fibonacci {
     }
 
     public static void main(String[] args) {
-        // TODO Auto-generated method stub
+        FibonacciRedundant f = new FibonacciRedundant(); 
+        System.out.println(f.fibonacci(10));
 
     }
 }
