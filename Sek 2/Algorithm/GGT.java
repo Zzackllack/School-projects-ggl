@@ -16,8 +16,8 @@ public class GGT {
 	}
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
+		GGT g = new GGT();
+        System.out.println(g.ggT(10, 5));
 	}
 
 }
