@@ -1,4 +1,4 @@
-public class FibonacciRedundant {
+public class Fibonacci_Redundant {
     
     public int fibonacci(int n) {
         if(n==0) {
@@ -13,7 +13,7 @@ public class FibonacciRedundant {
     }
 
     public static void main(String[] args) {
-        FibonacciRedundant f = new FibonacciRedundant(); 
+        Fibonacci_Redundant f = new Fibonacci_Redundant(); 
         System.out.println(f.fibonacci(10));
 
     }
