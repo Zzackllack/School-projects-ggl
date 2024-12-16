@@ -1,5 +1,7 @@
 public class Fibonacci_Iterativ {
 
+    //Der Unterschied zur rekursiven Methode besteht darin, dass die iterative Methode eine Schleife verwendet, um die Fibonacci-Zahlen zu berechnen, während die rekursive Methode sich selbst aufruft, um die Berechnungen durchzuführen. Die iterative Methode ist in der Regel effizienter, da sie weniger Speicherplatz benötigt und keine zusätzlichen Funktionsaufrufe erzeugt.
+
     public int fibonacci(int n) {
         if (n <= 1) {
             return n;
