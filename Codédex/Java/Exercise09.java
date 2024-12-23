@@ -1,4 +1,3 @@
-package Codédex.Java;
 import java.util.Scanner;
 
 public class Exercise09 {

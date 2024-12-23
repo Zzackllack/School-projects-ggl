@@ -1,5 +1,3 @@
-package Codédex.Java;
-
 public class Exercise08 {
     public static void main(String[] args) {
         double chemicalA = 5.5;

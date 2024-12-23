@@ -1,5 +1,3 @@
-package Codédex.Java;
-
 public class Exercise07 {
     public static void main(String[] args) {
         String name = "Cédric";

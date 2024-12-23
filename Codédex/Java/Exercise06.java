@@ -1,5 +1,3 @@
-package Codédex.Java;
-
 public class Exercise06 {
     public static void main(String[] args) {
         int livingRoom = 15;
