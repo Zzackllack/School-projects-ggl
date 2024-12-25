@@ -1,8 +1,7 @@
 # School Projects
 
 ## About
-This repository, `School-projects`, is dedicated to storing all kinds of school-related projects and assignments mostly written in Java. It serves as a showcase of learning and development in Java programming throughout my academic journey.
-it is christmas yippie
+This repository, `School-projects`, is dedicated to storing primarily all kinds of school projects and assignments mostly written in Java; additionally this repository houses courses and/or other coding related stuff that serves the purpose of educating. It serves as a showcase of learning and development in Java programming throughout my academic journey.
 
 ## Projects Included
 This repository will be updated with various Java projects related to school assignments and educational exercises.
