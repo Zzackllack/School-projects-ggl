@@ -19,7 +19,7 @@ This folder includes the following subdirectories (not on the newest state), eac
 
 ## Technologies Used
 - **Java**: All projects and assignments are written in Java.
-- **IDE**: Various Integrated Development Environments (IDEs) such as Visual Studio Code, IntelliJ IDEA, and Eclipse were used for development.
+- **IDE**: Various Integrated Development Environments (IDEs) such as Visual Studio Code, IntelliJ IDEA, and STS were used for development.
 
 ## Getting Started
 To get started with any of the projects in this folder, follow these steps:
