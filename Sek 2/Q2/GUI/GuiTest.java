@@ -32,7 +32,15 @@ public class GuiTest {
         JSlider slider = new JSlider(0, 100, 50);
         frame.add(slider);
 
-        frame.setLayout(new FlowLayout());
+        // Aufgabe 2: Unterschiedliche Layouts
+        // a) Erkundigen Sie sich im Internet über 4 mögliche Layouts, die das Swing-Framework anbietet.
+        // 1. FlowLayout: Anordnen der Komponenten in einer Zeile, wenn der Platz nicht ausreicht, wird in die nächste Zeile umgebrochen.
+        // 2. BorderLayout: Teilt den Container in fünf Bereiche (Norden, Süden, Osten, Westen, Mitte) und ordnet die Komponenten entsprechend an.
+        // 3. GridLayout: Teilt den Container in ein Gitter mit gleich großen Zellen und ordnet die Komponenten in diesen Zellen an.
+        // 4. CardLayout: Ermöglicht das Stapeln von Komponenten, wobei jeweils nur eine Komponente sichtbar ist.
+
+        // b) Beschreiben Sie jedes Layout mit 1-2 Sätzen und testen Sie das FlowLayout in Ihrem Programm.
+        frame.setLayout(new FlowLayout()); // Testing FlowLayout
         frame.setVisible(true);
     }
 }
