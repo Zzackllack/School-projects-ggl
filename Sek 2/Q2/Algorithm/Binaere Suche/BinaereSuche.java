@@ -1,6 +1,4 @@
 public class BinaereSuche {
-	private static int[]arr = {1,2,3,4,5,6,7,8,9,10};
-
 	//Methode die einen Wahrheitswert zur?kgibt und die Parameter integer Array einen integer links, sowie einen integer rechts und einen integer key bekommt 
 	public boolean binaereSucheRek(int[] arr, int links, int rechts, int key){
 		// Abfrage ob der Ganzahlwert links gr鲞er als der wert "rechts" ist; sollte dies der Fall sein, wird der Wahrheitswert falsch zur?kgeliefert 
@@ -19,8 +17,4 @@ public class BinaereSuche {
 		}
 	}
 	
-	public static void main(String[]args) {
-		BinaereSuche bs = new BinaereSuche();
-		System.out.println(bs.binaereSucheRek(arr, 1, 5, 3));
-	}
 }
