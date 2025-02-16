@@ -7,7 +7,7 @@ import javax.swing.JLabel;
 
 public class Counter implements ActionListener {
     private int count = 0;
-    private JLabel label;
+    private final JLabel label;
 
     public Counter() {
         JFrame frame = new JFrame("My Counter");
