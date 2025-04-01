@@ -24,3 +24,7 @@ JDBC ermöglicht Java-Programmen:
 - Transaktionen zu verwalten (Commit und Rollback)
 
 Durch die Standardisierung über JDBC können Entwickler Java-Anwendungen schreiben, die mit verschiedenen Datenbanken funktionieren, indem sie lediglich den entsprechenden JDBC-Treiber austauschen, ohne den restlichen Anwendungscode wesentlich ändern zu müssen.
+
+**Was ist Derby?**
+
+Apache Derby ist eine relationale Datenbank, die vollständig in Java implementiert ist und somit plattformunabhängig läuft. Sie kann sowohl als eingebettete Datenbank direkt in Java-Anwendungen integriert werden, als auch im Client-Server-Modus betrieben werden, und eignet sich besonders gut für Entwicklungs-, Test- und Lernumgebungen aufgrund ihrer einfachen Verwendbarkeit und geringen Ressourcenanforderungen.
