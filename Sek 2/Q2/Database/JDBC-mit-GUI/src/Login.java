@@ -27,11 +27,18 @@ public class Login implements ActionListener{
 
 
     public void init_connection(){
-        //open connection to database
-    try
-    {conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/world", "root", "root");
-    } catch(SQLException ex) { System.err.println(ex); }
-}
+        try {
+            // Lade Derby Client-Treiber
+            Class.forName("org.apache.derby.jdbc.ClientDriver");
+            // Verbinde mit Derby Network Server auf Port 1527, erstelle DB "world" falls nicht vorhanden
+            String url = "jdbc:derby://localhost:1527/world;create=true";
+            conn = DriverManager.getConnection(url);
+        } catch (ClassNotFoundException e) {
+            System.err.println("JDBC-Driver nicht gefunden: " + e);
+        } catch (SQLException ex) {
+            System.err.println("Verbindungsfehler: " + ex);
+        }
+    }
 
 
     public void start_gui(){

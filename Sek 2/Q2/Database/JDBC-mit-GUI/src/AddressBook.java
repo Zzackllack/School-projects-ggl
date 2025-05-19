@@ -46,14 +46,16 @@ public class AddressBook implements ActionListener{
 
 
 
-    public void init_connection()
-    {
-        try
-        {
-            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/addressbook", "root", "root");
-        }
-        catch(SQLException ex)
-        {
+    public void init_connection(){
+        try {
+            // Lade Derby Client-Treiber
+            Class.forName("org.apache.derby.jdbc.ClientDriver");
+            // Verbinde mit Derby Network Server, erstelle DB "addressbook" falls nicht vorhanden
+            String url = "jdbc:derby://localhost:1527/addressbook;create=true";
+            conn = DriverManager.getConnection(url);
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        } catch (SQLException ex) {
             ex.printStackTrace();
         }
     }
