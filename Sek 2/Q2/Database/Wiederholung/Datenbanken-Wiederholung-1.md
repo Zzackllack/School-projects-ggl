@@ -12,9 +12,9 @@ WHERE  Nachname LIKE 'K%'
 *b) Wie viele Räume hat der Standort, in dem der Kurs mit der KursNr 66 stattfindet.*
 
 ```sql
-SELECT s.RaumAnzahl
-FROM   Standort s
-JOIN   Kurs k 
-  ON   s.Adresse = k.StandortAdresse
-WHERE  k.KursNr = 66;
+SELECT RaumAnzahl
+FROM   Standort
+JOIN   Kurs
+  ON   Adresse = StandortAdresse
+WHERE  KursNr = 66;
 ```
