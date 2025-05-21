@@ -44,7 +44,7 @@ public class AddressBook implements ActionListener{
     Connection conn;
     String firstName, lastName, phoneNum;
 
-
+    
 
     public void init_connection(){
         try {
@@ -53,6 +53,16 @@ public class AddressBook implements ActionListener{
             // Verbinde mit Derby Network Server, erstelle DB "addressbook" falls nicht vorhanden
             String url = "jdbc:derby://localhost:1527/addressbook;create=true";
             conn = DriverManager.getConnection(url);
+            // Sicherstellen, dass Tabelle LOGIN_INFO existiert
+            try (Statement st = conn.createStatement()) {
+                st.executeUpdate(
+                    "CREATE TABLE LOGIN_INFO (" +
+                    "USERNAME VARCHAR(50) PRIMARY KEY, " +
+                    "PASSWORD VARCHAR(50) NOT NULL)"
+                );
+            } catch (SQLException e) {
+                // Tabelle existiert möglicherweise schon
+            }
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         } catch (SQLException ex) {

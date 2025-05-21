@@ -33,6 +33,16 @@ public class Login implements ActionListener{
             // Verbinde mit Derby Network Server auf Port 1527, erstelle DB "world" falls nicht vorhanden
             String url = "jdbc:derby://localhost:1527/world;create=true";
             conn = DriverManager.getConnection(url);
+            // Sicherstellen, dass Tabelle LOGIN_INFO existiert
+            try (Statement st = conn.createStatement()) {
+                st.executeUpdate(
+                    "CREATE TABLE LOGIN_INFO (" +
+                    "USERNAME VARCHAR(50) PRIMARY KEY, " +
+                    "PASSWORD VARCHAR(50) NOT NULL)"
+                );
+            } catch (SQLException e) {
+                // Tabelle existiert möglicherweise schon
+            }
         } catch (ClassNotFoundException e) {
             System.err.println("JDBC-Driver nicht gefunden: " + e);
         } catch (SQLException ex) {
