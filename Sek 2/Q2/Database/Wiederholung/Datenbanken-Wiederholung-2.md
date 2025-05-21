@@ -7,12 +7,12 @@
 ```sql
 SELECT Adresse FROM Kurs, Standort WHERE
 Kurs.Adresse=Standort.Adresse AND KursNr=150;
-``` 
+```
 
 *a) Transformieren Sie die obige Anweisung in einen Ausdruck relationaler Algebra.*
 
-$$
-\pi_{\text{Adresse}}\bigl(\sigma_{\text{KursNr}=150}(Kurs \bowtie_{\text{Kurs.Adresse}=\text{Standort.Adresse}} Standort)\bigr)
+$$  
+\pi_{\text{Adresse}}\Bigl(\sigma_{(\text{Kurs.Adresse} = \text{Standort.Adresse} \wedge \text{KursNr} = 150)}\bigl(Kurs \times Standort\bigr)\Bigr)  
 $$
 
 *b) Erläutern Sie den Begriff des Kreuzprodukts und geben Sie die Anzahl von Schritten zur Berechnung des Ausdrucks an, die sich bei einer Anzahl von 60 Datensätzen in der Tabelle Kurs und 5 Datensätzen in der Tabelle Standort ergeben.*
