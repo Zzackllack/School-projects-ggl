@@ -34,7 +34,6 @@ Insgesamt fallen somit etwa **300 Kreuzprodukt-Operationen, 300 Selektions-Check
 *c) Optimieren Sie den Ausdruck aus a) und geben Sie die damit notwendige Anzahl von Schritten zur Berechnung des Ausdrucks an (unter der Annahme, dass es nur einen Kurs mit der KursNr 150 gibt).*
 
 **Optimierter Ausdruck:**
-
 $$
 \pi_{\text{Adresse}}\Bigl(\bigl(\sigma_{\text{KursNr}=150}(Kurs)\bigr)\;\bowtie_{\text{Kurs.Adresse}=\text{Standort.Adresse}}\;Standort\Bigr)
 $$
