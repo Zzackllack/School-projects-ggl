@@ -1,5 +1,7 @@
 # DB-Wiederholung - Arbeitsauftrag 1 : Seite 1
 
+## Aufgabe 1.2: Formulieren Sie folgende Anweisungen in SQL:
+
 *a) Welche Kunden haben einen Nachnamen, der mit K oder L beginnt? Gefragt sind Vorname und Nachname.*
 
 ```sql
