@@ -48,6 +48,6 @@ Insgesamt also **60 + 5 + 1 = 66** Arbeitsschritte.
 
 *d) Erläutern Sie Ihr Vorgehen bei der Optimierung.*
 
-Zur Optimierung wurde die Selektion `σ_{KursNr=150}` direkt auf die Relation `Kurs` angewendet, bevor der Join mit `Standort` durchgeführt wurde. 
-Dadurch reduziert sich die Anzahl der Tupel für den Join von ursprünglich 60×5 = 300 auf 1×5 = 5 Tupel, was die Gesamtkosten für Kreuzprodukt- und Selektionsoperationen erheblich senkt. 
+Zur Optimierung wurde die Selektion `σ_{KursNr=150}` direkt auf die Relation `Kurs` angewendet, bevor der Join mit `Standort` durchgeführt wurde.
+Dadurch reduziert sich die Anzahl der Tupel für den Join von ursprünglich 60×5 = 300 auf 1×5 = 5 Tupel, was die Gesamtkosten für Kreuzprodukt- und Selektionsoperationen erheblich senkt.
 Anschließend erfolgt erst die Projektion auf `Adresse`, wodurch unnötige Datenverarbeitungen vermieden werden.

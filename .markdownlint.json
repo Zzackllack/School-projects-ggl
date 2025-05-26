@@ -3,5 +3,15 @@
   "MD001": false,
   "MD013": false,
   "MD026": false,
-  "MD029": false
+  "MD029": false,
+  "MD033": {
+    "allowed_elements": [
+      "u",
+      "code",
+      "pre",
+      "img",
+      "br",
+      "hr"
+    ]
+  }
 }
