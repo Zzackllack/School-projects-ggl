@@ -22,4 +22,10 @@ d)
 
 ```sql
 SELECT p.ProjektName, m.Name, m.PersNr FROM Projekt p JOIN Mitarbeiter m ON p.ProjektNr = m.ProjektNr;
-````
+```
+
+e)
+
+```sql
+SELECT fx.PersNr, fx.Name FROM Mitarbeiter fx UNION SELECT fy.PersNr, fy.Name FROM Mitarbeiter fy;
+```
