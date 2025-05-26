@@ -1,0 +1,11 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "integrate_Gui",
+            "request": "launch",
+            "mainClass": "integrate_Gui",
+            "projectName": "School-projects-ggl_81dc49cb"
+        }
+    ]
+}

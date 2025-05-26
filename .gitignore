@@ -1,9 +1,39 @@
-.idx/dev.nix
-.idx
-.vscode
 */derby.log
 Sek 2/Q2/Database/JDBC-mit-GUI/world
 .DS_Store
 *.log
 *.dat
 *.lck
+
+# Ignore compiled class files
+*.class
+
+# Ignore package files
+*.jar
+*.war
+*.ear
+
+# Ignore IDE project files
+/.idea/
+/*.iml
+*.classpath
+*.project
+*.settings/
+
+# Ignore Maven and Gradle directories
+/target/
+/build/
+
+# Ignore logs and temporary files
+*.tmp
+*.swp
+*.swo
+*.bak
+
+# Ignore test reports
+/test-output/
+/surefire-reports/
+/test-results/
+
+# Ignore OS-specific files
+Thumbs.db
