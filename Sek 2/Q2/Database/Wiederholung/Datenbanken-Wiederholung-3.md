@@ -64,3 +64,14 @@ a)
     ```
 
     Hier hängt `Name` nur von `Leser-ID` ab, nicht vom Gesamt-Schlüssel. Das verletzt 2NF. Durch Entfernen von `Name` (Auslagerung in `Leser`) wird die Teilabhängigkeit beseitigt.
+
+b)
+| Vater    | Mutter | Kinder |
+| Johann   | Martha | Else |
+| Johann   | Maria  | Lucia |
+| Johann   | Maria  | Theo |
+| Johann   | Maria  | Josef |
+| Heinz   | Martha | Cleo |
+
+c)
+Da die erste Normalform besagt, dass alle Attribute atomar sein müssen, habe ich die Spalte Kinder atomisiert, indem ich statt mehrere Kinder in einer Zelle jede Kind-Paarung in eine eigene Zeile geschrieben habe. Dadurch wird die Tabelle in die erste Normalform überführt.
