@@ -1,5 +1,7 @@
 # DB-Wiederholung Arbeitsauftrag 3 : Seite 1
 
+## Aufgabe 1:
+
 a)
 
 ```sql
@@ -29,3 +31,36 @@ e)
 ```sql
 SELECT fx.PersNr, fx.Name FROM Mitarbeiter fx UNION SELECT fy.PersNr, fy.Name FROM Mitarbeiter fy;
 ```
+
+## Aufgabe 10:
+
+a)
+
+### Erste Normalform (1NF)
+
+- **Erklärung**
+
+    Eine Relation befindet sich in der ersten Normalform, wenn alle Attribute atomare Wertebereiche haben, d. h. sie lassen sich nicht weiter in sinnvollere Einzelwerte zerlegen. Wiederholende Gruppen oder zusammengesetzte Felder sind nicht erlaubt.
+
+- **Beispiel**
+
+    In der Tabelle **Leser** stand ursprünglich ein Attribut `Adresse` mit Werten wie „Schleistraße 10, 12345 Beispielstadt“. Um 1NF zu erfüllen, muss man `Adresse` in `Straße`, `Hausnummer`, `PLZ` und `Ort` aufteilen; ebenso `Name` in `Vorname` und `Nachname`.
+
+### Zweite Normalform (2NF)
+
+- **Erklärung**
+
+    Eine Relation ist in der zweiten Normalform, wenn
+
+    1. sie in 1NF ist und
+    2. jedes Nichtschlüsselattribut **voll** funktional vom **gesamten** (ggf. zusammengesetzten) Primärschlüssel abhängt – partielle Abhängigkeiten von nur einem Teil des Schlüssels sind verboten.
+- **Beispiel**
+
+    Tabelle **Mahnung** mit zusammengesetztem Primärschlüssel `(Datum, Leser-ID)` und dem Attribut `Name`:
+
+    ```text
+    Datum      Leser-ID   Name    Betrag
+    02.02.2017 345        Müller  3,60
+    ```
+
+    Hier hängt `Name` nur von `Leser-ID` ab, nicht vom Gesamt-Schlüssel. Das verletzt 2NF. Durch Entfernen von `Name` (Auslagerung in `Leser`) wird die Teilabhängigkeit beseitigt.
