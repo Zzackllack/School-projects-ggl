@@ -147,3 +147,40 @@ Ausleihe (<u>↑VideoNr</u>, <u>↑KundenNr</u>, <u>AusleiheDatum</u>, Rückgabe
 
 - Ich habe die Optimierung angewandt, indem ich die Selektion (σ) vor dem Kreuzprodukt (×) durchgeführt habe. Dadurch wird die Anzahl der Datensätze, die im Kreuzprodukt verarbeitet werden müssen, reduziert, was die Effizienz der Abfrage verbessert.
 
+## Aufgabe 7:
+
+*a)*
+
+- JDBC (Java Database Connectivity) ist eine API, die es ermöglicht, auf relationale Datenbanken in Java zuzugreifen. Sie bietet eine standardisierte Schnittstelle für den Zugriff auf Datenbanken und ermöglicht es Entwicklern, SQL-Abfragen auszuführen und Ergebnisse zu verarbeiten.
+
+*b) - e)*
+
+```java
+import java.sql.*;
+
+public class  DatabaseConnectionExample{
+    public static void main(String[] args) throws SQLException {
+        String url = "jdbc:derby:C:\\datenbanken\\derby";
+        Connection con = DriverManager.getConnection(url);
+        Statement stmt = con.createStatement();
+
+        String sql_create = "CREATE TABLE Mitarbeiter (ID INT PRIMARY KEY, Vorname VARCHAR(50), Nachname VARCHAR(50)"
+        stmt.executeUpdate(sql_create);
+
+        String sql_insert = "INSERT INTO Mitarbeiter (ID, Vorname, Nachname) VALUES"
+            + "(1, 'Max', 'Mustermann'),"
+            + "(2, 'Erika', 'Mustermann'),"
+            + "(3, 'Hans', 'Müller')";
+        stmt.executeUpdate(sql_insert);
+
+        String sql_select = "SELECT * FROM Mitarbeiter";
+        ResultSet rs = stmt.executeQuery(sql_select);
+        while (rs.next()) {
+            int id = rs.getInt("ID");
+            String vorname = rs.getString("Vorname");
+            String nachname = rs.getString("Nachname");
+            System.out.println("ID: " + id + ", Vorname: " + vorname + ", Nachname: " + nachname);
+        }
+    }
+}
+```
