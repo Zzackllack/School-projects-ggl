@@ -76,6 +76,12 @@ SELECT Vorname, Name FROM LehrkraftGGL WHERE Name LIKE 'H%' OR Name Like 'I%'
 SELECT l.Name, l.Vorname FROM LehrkraftGGL l, Fach f WHERE l.FachID = 2 ORDER BY l.Name ASC
 ```
 
+*Korrektur:*
+
+```sql
+SELECT l.Name, l.Vorname FROM LehrkraftGGL l JOIN unterrichtet u ON l.PersID = u.PersID WHERE u.FachID = 2 ORDER BY l.Name;
+```
+
 *h)*
 
 ```sql
@@ -86,6 +92,12 @@ SELECT AVG(Unterrichtsstunden) AS DurchschnittsUnterrichtsstunden FROM Lehrkraft
 
 ```sql
 SELECT MAX(Stufe), Fachname FROM Fach
+```
+
+*Korrektur:*
+
+```sql
+SELECT MAX(Stufe) AS Max_Stufe, Fachname FROM Fach GROUP BY Fachname
 ```
 
 *j)*
@@ -143,6 +155,10 @@ Ausleihe (<u>↑VideoNr</u>, <u>↑KundenNr</u>, <u>AusleiheDatum</u>, Rückgabe
 
 ΠName(σ(Autor='Thomas Mann') (σ(Buch.VID=Verlag.VID) (Buch) × Verlag))
 
+*Korrektur:*
+
+π Name (σ Buch.VID=Verlag.VID (σ Autor='Thomas Mann'(Buch) × Verlag))
+
 *d)*
 
 - Ich habe die Optimierung angewandt, indem ich die Selektion (σ) vor dem Kreuzprodukt (×) durchgeführt habe. Dadurch wird die Anzahl der Datensätze, die im Kreuzprodukt verarbeitet werden müssen, reduziert, was die Effizienz der Abfrage verbessert.
@@ -164,13 +180,12 @@ public class  DatabaseConnectionExample{
         Connection con = DriverManager.getConnection(url);
         Statement stmt = con.createStatement();
 
-        String sql_create = "CREATE TABLE Mitarbeiter (ID INT PRIMARY KEY, Vorname VARCHAR(50), Nachname VARCHAR(50)"
+        String sql_create = "CREATE TABLE Mitarbeiter (ID INT PRIMARY KEY, Vorname VARCHAR(50), Nachname VARCHAR(50))";
         stmt.executeUpdate(sql_create);
 
         String sql_insert = "INSERT INTO Mitarbeiter (ID, Vorname, Nachname) VALUES"
             + "(1, 'Max', 'Mustermann'),"
             + "(2, 'Erika', 'Mustermann'),"
-            + "(3, 'Hans', 'Müller')";
         stmt.executeUpdate(sql_insert);
 
         String sql_select = "SELECT * FROM Mitarbeiter";
