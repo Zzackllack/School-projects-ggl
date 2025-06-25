@@ -171,3 +171,14 @@ _(Die drei Bäume sind in der Original-Abbildung, z. B. ein einzelner Knoten, ei
 | o      | 0    | 5     |
 
 ---
+
+24.06.2025
+
+Die Durchlaufordnung nach der Preorder-Reihenfolge ist:
+a, b, d, e, g, c, f, h, j, i.
+
+Die Durchlaufordnung nach der Postorder-Reihenfolge ist:
+d, g, e, b, j, h, i, f, c, a.
+
+Die Durchlaufordnung nach der Inorder-Reihenfolge ist:
+d, b, g, e, a, c, h, j, f, i.
