@@ -2,7 +2,7 @@
 
 ---
 
-## Aufgabe 2.1
+### Aufgabe 2.1
 
 **Aufgabe:** Bestimmen Sie den Typ aller Knoten in folgender Abbildung. Beachten Sie, dass einzelne Knoten auch mehrere Typen sein können.
 
@@ -14,7 +14,7 @@
 
 ---
 
-## Aufgabe 2.2
+### Aufgabe 2.2
 
 **Aufgabe:** Bestimmen Sie für die zwei Bäume der Aufgabe 2.1:
 a) die Höhe,  
@@ -47,7 +47,7 @@ f) und die Tiefe jedes Knotens.
 
 ---
 
-## Aufgabe 2.3
+### Aufgabe 2.3
 
 **Aufgabe:** Bestimmen Sie im folgenden Baum die Typen der Knoten. Füllen Sie dazu die vorgegebene Tabelle aus.
 
@@ -71,7 +71,7 @@ _(Struktur gemäß Aufgabenstellung der Abbildung)_
 
 ---
 
-## Aufgabe 2.4
+### Aufgabe 2.4
 
 **Aufgabe:** Bestimmen Sie für jeden Knoten des Baumes der Aufgabe 2.3 die Tiefe und den Grad.
 
@@ -96,7 +96,7 @@ _(Struktur gemäß Aufgabenstellung der Abbildung)_
 
 ---
 
-## Aufgabe 2.5
+### Aufgabe 2.5
 
 **Aufgabe:** Zeichnen Sie im Baum der Aufgabe 2.3 die Niveaus und die Höhe ein. Überlegen Sie sich, welche Ordnung dieser Baum haben könnte, und begründen Sie Ihre Entscheidung.
 
@@ -108,7 +108,7 @@ _(Struktur gemäß Aufgabenstellung der Abbildung)_
 
 ---
 
-## Aufgabe 2.6
+### Aufgabe 2.6
 
 **Aufgabe:** Gegeben sind drei folgende Bäume der Ordnung 2. Entscheiden Sie, welche Bäume vollständig und welche ausgefüllt sind, und begründen Sie Ihre Antwort.
 
@@ -128,7 +128,7 @@ _(Die drei Bäume sind in der Original-Abbildung, z. B. ein einzelner Knoten, ei
 
 ---
 
-## Aufgabe 2.7
+### Aufgabe 2.7
 
 **Aufgabe:** Recherchieren Sie drei spezielle Bäume und deren wichtigste Anwendung. Beachten Sie dabei besondere Eigenschaften wie Ordnung, etc.
 
@@ -182,3 +182,15 @@ d, g, e, b, j, h, i, f, c, a.
 
 Die Durchlaufordnung nach der Inorder-Reihenfolge ist:
 d, b, g, e, a, c, h, j, f, i.
+
+---
+
+11.9.2025
+
+## Kapitel 5: AVL Bäume
+
+Aufgabe 5.1:
+Der linke Baum ist kein AVL-Baum. Der rechte Baum ist ein AVL-Baum.
+
+![](img/Aufgabe-5.1.png)
+ 
