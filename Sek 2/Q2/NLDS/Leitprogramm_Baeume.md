@@ -190,7 +190,6 @@ d, b, g, e, a, c, h, j, f, i.
 ## Kapitel 5: AVL Bäume
 
 Aufgabe 5.1:
-Der linke Baum ist kein AVL-Baum. Der rechte Baum ist ein AVL-Baum.
+Der linke Baum ist kein AVL-Baum. Da er nicht einen balancierten Wert von 1 oder 0 Kindern hat, ist er nicht balanciert. Der rechte Baum ist ein AVL-Baum.
 
 ![](img/Aufgabe-5.1.png)
- 
