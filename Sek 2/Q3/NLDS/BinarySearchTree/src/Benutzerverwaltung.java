@@ -7,12 +7,14 @@ public class Benutzerverwaltung{
         benutzerBaum.insert(b);
     }
 
-    public void nutzerLoeschen(String pBenutzername, String pPw){//TODO}
+    public void nutzerLoeschen(String pBenutzername, String pPw){
+        Benutzerprofil b = new Benutzerprofil(pBenutzername, pPw);
+        benutzerBaum.remove(b);
     }
 
     public boolean profilVorhanden(String pBenutzername){
         Benutzerprofil b = new Benutzerprofil(pBenutzername, "");
-        return benutzerBaum.contains(b);
+        return benutzerBaum.search(b) != null;
     }
     
 }

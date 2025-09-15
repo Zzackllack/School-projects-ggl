@@ -1,11 +1,18 @@
 {
-    "configurations": [
-        {
-            "type": "java",
-            "name": "integrate_Gui",
-            "request": "launch",
-            "mainClass": "integrate_Gui",
-            "projectName": "School-projects-ggl_81dc49cb"
-        }
-    ]
+  "configurations": [
+    {
+      "type": "java",
+      "name": "BenutzerverwaltungTest",
+      "request": "launch",
+      "mainClass": "BenutzerverwaltungTest",
+      "projectName": "School-projects-ggl_81dc49cb"
+    },
+    {
+      "type": "java",
+      "name": "integrate_Gui",
+      "request": "launch",
+      "mainClass": "integrate_Gui",
+      "projectName": "School-projects-ggl_81dc49cb"
+    }
+  ]
 }
