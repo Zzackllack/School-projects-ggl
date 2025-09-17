@@ -2,6 +2,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Matrix",
+      "request": "launch",
+      "mainClass": "Matrix",
+      "projectName": "School-projects-ggl_81dc49cb"
+    },
+    {
+      "type": "java",
       "name": "BenutzerverwaltungTest",
       "request": "launch",
       "mainClass": "BenutzerverwaltungTest",
