@@ -4,6 +4,10 @@
  * You need the following commands:
  * javac --enable-preview --release 25 -d out java25.java
  * java --enable-preview -cp out java25
+ * @since 2025-09
+ * @see https://openjdk.org/jeps/512
+ * @implSpec This code was tested with openjdk 25 2025-09-16; OpenJDK Runtime Environment Homebrew (build 25); OpenJDK 64-Bit Server VM Homebrew (build 25, mixed mode, sharing)
+ * @author Zacklack
  */
 
 void main() {
