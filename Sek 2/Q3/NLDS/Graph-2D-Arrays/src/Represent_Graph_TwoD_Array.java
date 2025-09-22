@@ -83,7 +83,7 @@ public class Represent_Graph_TwoD_Array {
    *
    * @param args command-line arguments (ignored)
    */
-    public static void main(String args[]) {
+  public static void main(String args[]) {
     int v,
       e,
       count = 1,
