@@ -18,8 +18,8 @@
 
 public class GraphNode {
 
-  private String name;
-  private List edges;
+  private final String name; //Can be final but does not need to be
+  private final List<Edge> edges; //Can be final but does not need to be
   private boolean marked;
 
   /**
@@ -27,9 +27,10 @@ public class GraphNode {
    *Der Knoten ist nicht markiert.
    *@param pName Bezeichnung des Knotens
    */
+  @SuppressWarnings("Convert2Diamond")
   public GraphNode(String pName) {
     name = pName;
-    edges = new List();
+    edges = new List<Edge>();
     marked = false;
   }
 
@@ -83,7 +84,7 @@ public class GraphNode {
     Edge e = null;
     edges.toFirst();
     while (!ok && edges.hasAccess()) {
-      e = (Edge) edges.getContent();
+      e = edges.getContent();
       if (e.getNeighbour() == pNode) ok = true;
       edges.next();
     }
@@ -100,7 +101,7 @@ public class GraphNode {
       Edge e;
       edges.toFirst();
       while (edges.hasAccess()) {
-        e = (Edge) edges.getContent();
+        e = edges.getContent();
         if (e.getNeighbour() == pNode) edges.remove();
         edges.next();
       }
@@ -110,12 +111,13 @@ public class GraphNode {
   /**
    * Interne Methode
    */
-  List getNeighbours_() {
+  List<GraphNode> getNeighbours_() {
     // liefert eine Liste mit den Nachbarknoten
-    List lList = new List();
+    @SuppressWarnings("Convert2Diamond")
+    List<GraphNode> lList = new List<GraphNode>();
     edges.toFirst();
     while (edges.hasAccess()) {
-      Edge lEdge = (Edge) edges.getContent();
+      Edge lEdge = edges.getContent();
       lList.append(lEdge.getNeighbour());
       edges.next();
     }
