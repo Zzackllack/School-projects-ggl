@@ -1,0 +1,31 @@
+Änderungen:
+
+- Die Klassen `Graph` und `GraphNode` wurden angepasst, sodass sie die generische Version
+  der Klasse `List<...>` nutzen. Alle unnötigen Raw-Type-Casts wurden entfernt.
+
+- Neue Testklasse `GraphTest.java` hinzugefügt, die einfache Operationen (Hinzufügen von
+  Knoten, Erstellen von Kanten, Abfragen von Knoten und Kantengewichten sowie Entfernen
+  eines Knotens) demonstriert.
+
+Wesentliche Unterschiede: Listen-basierte vs. Array-basierte Graph-Implementierung
+
+- Dynamik/Größenänderung:
+  - Liste: Einfaches Hinzufügen/Entfernen von Knoten und Kanten ohne Neuzuordnung.
+  - Array: Muss die Kapazität überwachen; beim Überschreiten ist ein Umkopieren in
+    ein größeres Array notwendig (oder feste Obergrenze).
+
+- Speicher-Overhead:
+  - Liste: Zusätzlicher Speicher pro Element (Verweis auf das nächste Element).
+  - Array: Kompaktere Speicherung (kontinuierlicher Speicher), aber eventuellMehrfach-Allokationen
+    beim Wachsen.
+
+- Zugriff:
+  - Liste: sequenzieller Zugriff (O(n)), geeignet für Einfügen/Entfernen in beliebiger Position
+    (bei bekanntem Verweis) bzw. Anhängen (am Ende, wenn Referenzen vorhanden) in O(1).
+  - Array: Random-Access (O(1) Zugriff nach Index), Einfügen/Entfernen in der Mitte erfordert Verschieben
+    (O(n)).
+
+- Eignung für Graphen:
+  - Listen eignen sich gut für spärliche Graphen (Adjazenzlisten): Speicher proportional zu |V| + |E|.
+  - Arrays (Adjazenzmatrix) eignen sich für dichte Graphen: Zugriff, ob eine Kante existiert, in O(1), aber
+    Speicherbedarf O(|V|^2).

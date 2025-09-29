@@ -59,7 +59,7 @@ public class Graph {
     boolean lGefunden = false;
     nodeList.toFirst();
     while (nodeList.hasAccess() && !lGefunden) {
-      GraphNode lKnoten = (GraphNode) nodeList.getContent();
+      GraphNode lKnoten = nodeList.getContent();
       lGefunden = lKnoten.getName().equals(pNode);
       nodeList.next();
     }
@@ -78,7 +78,7 @@ public class Graph {
     nodeList.toFirst();
     boolean lStop = false;
     while (nodeList.hasAccess() && !lStop) {
-      GraphNode lNode = (GraphNode) nodeList.getContent();
+      GraphNode lNode = nodeList.getContent();
       if (lNode.getName().equals(pName)) {
         lNode0 = lNode;
         lStop = true;
@@ -98,12 +98,12 @@ public class Graph {
     if (pNode != null) {
       nodeList.toFirst();
       while (nodeList.hasAccess()) {
-        GraphNode lNode = (GraphNode) nodeList.getContent();
+        GraphNode lNode = nodeList.getContent();
         if (lNode.getName().equals(pNode.getName())) {
           List<GraphNode> lListe = this.getNeighbours(lNode);
           lListe.toFirst();
           while (lListe.hasAccess()) {
-            GraphNode lNode1 = (GraphNode) lListe.getContent();
+            GraphNode lNode1 = lListe.getContent();
             this.removeEdge(lNode, lNode1);
             this.removeEdge(lNode1, lNode);
             lListe.next();
@@ -152,7 +152,7 @@ public class Graph {
       if (!lNeighbours.isEmpty()) {
         lNeighbours.toFirst();
         while (lNeighbours.hasAccess()) {
-          lNeighbour = (GraphNode) lNeighbours.getContent();
+          lNeighbour = lNeighbours.getContent();
           if (lNeighbour.getName().equals(pNode2.getName())) result = true;
           lNeighbours.next();
         }
@@ -194,7 +194,7 @@ public class Graph {
     if (!nodeList.isEmpty()) {
       nodeList.toFirst();
       while (nodeList.hasAccess()) {
-        ((GraphNode) nodeList.getContent()).unmark();
+        nodeList.getContent().unmark();
         nodeList.next();
       }
     }
@@ -210,7 +210,7 @@ public class Graph {
       nodeList.toFirst();
       boolean lAllMarked = true;
       while (nodeList.hasAccess() && lAllMarked) {
-        if (!((GraphNode) nodeList.getContent()).isMarked()) lAllMarked = false;
+        if (!nodeList.getContent().isMarked()) lAllMarked = false;
         nodeList.next();
       }
       return lAllMarked;
@@ -227,7 +227,7 @@ public class Graph {
     List<GraphNode> lList = new List<GraphNode>();
     nodeList.toFirst();
     while (nodeList.hasAccess()) {
-      GraphNode g = (GraphNode) nodeList.getContent();
+      GraphNode g = nodeList.getContent();
       lList.append(g);
       nodeList.next();
     }
