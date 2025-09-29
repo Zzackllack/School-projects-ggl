@@ -17,14 +17,15 @@
 
 public class Graph {
 
-  private List nodeList;
+  private final List<GraphNode> nodeList; //Can be final but does not need to be
 
   /**
    * Ein neuer Graph wird erzeugt.
    * Er enthaelt noch keine Knoten.
    */
+  @SuppressWarnings("Convert2Diamond")
   public Graph() {
-    nodeList = new List();
+    nodeList = new List<GraphNode>();
   }
 
   /**
@@ -99,7 +100,7 @@ public class Graph {
       while (nodeList.hasAccess()) {
         GraphNode lNode = (GraphNode) nodeList.getContent();
         if (lNode.getName().equals(pNode.getName())) {
-          List lListe = this.getNeighbours(lNode);
+          List<GraphNode> lListe = this.getNeighbours(lNode);
           lListe.toFirst();
           while (lListe.hasAccess()) {
             GraphNode lNode1 = (GraphNode) lListe.getContent();
@@ -144,7 +145,7 @@ public class Graph {
    */
   public boolean hasEdge(GraphNode pNode1, GraphNode pNode2) {
     boolean result = false;
-    List lNeighbours;
+    List<GraphNode> lNeighbours;
     GraphNode lNeighbour;
     if ((pNode1 != null) && (pNode2 != null)) {
       lNeighbours = pNode1.getNeighbours_();
@@ -220,9 +221,10 @@ public class Graph {
    * Die Anfrage liefert eine Liste, die alle Knoten des Graphen enthaelt.
    * @return Knotenliste
    */
-  public List getNodes() {
+  public List<GraphNode> getNodes() {
     // liefert Knoten als Kopie der Knotenliste
-    List lList = new List();
+    @SuppressWarnings("Convert2Diamond")
+    List<GraphNode> lList = new List<GraphNode>();
     nodeList.toFirst();
     while (nodeList.hasAccess()) {
       GraphNode g = (GraphNode) nodeList.getContent();
@@ -238,7 +240,7 @@ public class Graph {
    * @param pNode Knoten
    * @return Liste mit allen Nachbarknoten
    */
-  public List getNeighbours(GraphNode pNode) {
+  public List<GraphNode> getNeighbours(GraphNode pNode) {
     return pNode.getNeighbours_();
   }
 }
