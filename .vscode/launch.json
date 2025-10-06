@@ -2,6 +2,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "GraphTest",
+      "request": "launch",
+      "mainClass": "GraphTest",
+      "projectName": "School-projects-ggl_81dc49cb"
+    },
+    {
+      "type": "java",
       "name": "Represent_Graph_TwoD_Array",
       "request": "launch",
       "mainClass": "Represent_Graph_TwoD_Array",
