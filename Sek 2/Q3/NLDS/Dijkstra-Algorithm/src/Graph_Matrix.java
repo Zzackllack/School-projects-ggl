@@ -233,46 +233,85 @@ public class Graph_Matrix
 
 	public void kuerzesterWeg(String startKnoten, String zielKnoten)
 	{
-		int startNummer = knotenNummer(startKnoten); 
+		/**
+		 * Berechnet mit Dijkstras Algorithmus den kürzesten Weg (nach Gewichtung)
+		 * von startKnoten nach zielKnoten und gibt die Gesamtdistanz sowie
+		 * die Reihenfolge der Knoten auf der Konsole aus.
+		 *
+		 * Annahmen / Hinweise:
+		 * - Die Kanten haben positive Gewichtungen (gewichtung > 0).
+		 * - Nicht verbundene Kanten sind in der Matrix mit UNVERBUNDEN (-1)
+		 *   markiert; nicht erreichbare Knoten behalten die Distanz
+		 *   Integer.MAX_VALUE.
+		 */
+
+		// Interne Indizes der Start- und Zielknoten bestimmen
+		int startNummer = knotenNummer(startKnoten);
 		int zielNummer  = knotenNummer(zielKnoten);
+
+		// Hilfsvariablen
 		int knotenNummer, neueDistanz;
 		String pfad;
-		
+
+		// 1) Initialisierung:
+		// - Alle Knoten als unbesucht markieren
+		// - Alle Distanzen auf "unendlich" (Integer.MAX_VALUE) setzen
 		for (int i=0; i<anzahlKnoten; i++)
 		{
 			besucht[i]=false;
-			distanz[i]=Integer.MAX_VALUE;              
+			distanz[i]=Integer.MAX_VALUE;
 		}
+
+		// Die Distanz des Startknotens zu sich selbst ist 0
 		distanz[startNummer] = 0;
+		// kommtVon dient später zur Pfadrekonstruktion; für den Startknoten
+		// setzen wir ihn auf sich selbst als Markierung
 		kommtVon[startNummer] = startNummer;
 
-		// wiederhole bis alle Knoten besucht sind
+		// 2) Hauptschleife von Dijkstra:
+		// Wir wiederholen so oft, wie es Knoten gibt. In jeder Iteration
+		// wählen wir den unbesuchten Knoten mit der kleinsten bisherigen
+		// Distanz (Funktion minKnoten) und "entspannen" alle ausgehenden
+		// Kanten dieses Knotens.
 		for (int i=0; i<anzahlKnoten; i++)
 		{
-			// der unbesuchte Knoten mit der minimalen Distanz wird zum aktiven Knoten
+			// a) aktiven Knoten wählen: unbesucht und mit minimaler distanz
 			knotenNummer = minKnoten();
+			// b) diesen Knoten als besucht markieren
 			besucht[knotenNummer] = true;
+
+			// c) Alle möglichen Abzweigungen (Nachbarn) überprüfen
 			for (int abzweigNummer=0; abzweigNummer<anzahlKnoten; abzweigNummer++)
 			{
-				if ((matrix[knotenNummer][abzweigNummer]>0) && (!besucht[abzweigNummer]))            	
+				// Es existiert eine Kante (matrix > 0) und der Nachbar ist noch
+				// nicht besucht. (UNVERBUNDEN ist -1, damit wird die Bedingung
+				// matrix[...] > 0 ausgeschlossen.)
+				if ((matrix[knotenNummer][abzweigNummer]>0) && (!besucht[abzweigNummer]))
 				{
+					// Distanz über den aktuellen Knoten zum Nachbarn berechnen
 					neueDistanz = distanz[knotenNummer] + matrix[knotenNummer][abzweigNummer];
 
+					// Falls der über diesen Weg gefundene Wert kleiner ist als die
+					// bisher bekannte Distanz, dann aktualisieren (Relaxation)
 					if (neueDistanz < distanz[abzweigNummer])
 					{
 						distanz[abzweigNummer] = neueDistanz;
+						// Für die spätere Pfadrekonstruktion merken, von welchem Knoten
+						// wir zum Nachbarn gekommen sind.
 						kommtVon[abzweigNummer] = knotenNummer;
 					}
 				}
-			}            
+			}
 		}
 
-		// Fertig! Die Entfernung ausgeben
+		// 3) Ausgabe: Gesamtdistanz und Pfad rekonstruktieren
 		System.out.println("Entfernung: " + distanz[zielNummer]);
+		// Pfad von Ziel zurück zum Start zusammensetzen
 		pfad = zielKnoten;
 		knotenNummer = zielNummer;
 		while (knotenNummer != startNummer)
 		{
+			// kommtVon führt einen Schritt zurück auf dem kürzesten Pfad
 			knotenNummer = kommtVon[knotenNummer];
 			pfad = knoten[knotenNummer].BezeichnungGeben() + "/" + pfad;
 		}
