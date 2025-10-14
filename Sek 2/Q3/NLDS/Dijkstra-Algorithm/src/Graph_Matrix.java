@@ -50,7 +50,25 @@ public class Graph_Matrix
 
 	public void knotenEinfuegen(String bezeichner)    
 	{
-		//TODO
+		// Prüfen, ob bereits ein Knoten mit diesem Bezeichner existiert
+		if (knotenNummer(bezeichner) != NICHTVORHANDEN)
+			return;
+
+		// Prüfen, ob noch Platz für einen weiteren Knoten ist
+		if (anzahlKnoten >= knoten.length)
+			return;
+
+		// Neuer Knoten anlegen
+		knoten[anzahlKnoten] = new Knoten(bezeichner);
+
+		// Für den neuen Knoten alle Verbindungen zu/von anderen Knoten als UNVERBUNDEN markieren
+		for (int i = 0; i <= anzahlKnoten; i++)
+		{
+			matrix[anzahlKnoten][i] = UNVERBUNDEN;
+			matrix[i][anzahlKnoten] = UNVERBUNDEN;
+		}
+
+		anzahlKnoten++;
 	}
 
 
@@ -92,7 +110,15 @@ public class Graph_Matrix
 
 	public void kanteEinfuegen(String von, String nach, int gewichtung)
 	{
-		//TODO
+ 		int vonNummer = knotenNummer(von);
+		int nachNummer = knotenNummer(nach);
+
+		// Nur einfügen, wenn beide Knoten existieren und Gewichtung gültig ist
+		if ((vonNummer != NICHTVORHANDEN) && (nachNummer != NICHTVORHANDEN) && (gewichtung > 0))
+		{
+			matrix[vonNummer][nachNummer] = gewichtung;
+			matrix[nachNummer][vonNummer] = gewichtung; // ungerichteter Graph => symmetrisch
+		}
 	}
 
 
