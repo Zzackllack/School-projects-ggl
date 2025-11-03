@@ -1,9 +1,10 @@
 {
-    "java.project.referencedLibraries": [
-        "lib/**/*.jar",
-        "Sek 2/Q2/Database/JDBC-mit-GUI/lib/derbyclient.jar",
-        "Sek 2/Q2/Database/JDBC-mit-GUI/lib/derbytools.jar",
-        "Sek 2/Q2/Database/JDBC-mit-GUI/lib/derby.jar",
-        "Sek 2/Q2/Database/JDBC-mit-GUI/lib/derbyshared.jar"
-    ]
+  "java.project.referencedLibraries": [
+    "lib/**/*.jar",
+    "Sek 2/Q2/Database/JDBC-mit-GUI/lib/derbyclient.jar",
+    "Sek 2/Q2/Database/JDBC-mit-GUI/lib/derbytools.jar",
+    "Sek 2/Q2/Database/JDBC-mit-GUI/lib/derby.jar",
+    "Sek 2/Q2/Database/JDBC-mit-GUI/lib/derbyshared.jar"
+  ],
+  "java.debug.settings.onBuildFailureProceed": true
 }

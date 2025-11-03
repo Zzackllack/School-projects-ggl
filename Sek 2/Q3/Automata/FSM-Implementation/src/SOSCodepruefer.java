@@ -1,4 +1,4 @@
-public SOSCodepruefer() {
+public class SOSCodepruefer {
     private int zustand;
     private void zustandWechseln(char eingabe) {
         switch (zustand) {
@@ -20,18 +20,15 @@ public SOSCodepruefer() {
             } break;
             case 1: {
                 switch (eingabe) {
-                    case '#' : {
+                    case '#' -> { 
                         zustand = 11;
                     }
-                    break;
-                    case '-' : {
+                    case '-' -> {
                         zustand = 0;
                     }
-                    break;
-                    case '.' : {
+                    case '.' -> {
                         zustand = 2;
                     }
-                    break;
                 }
             } break;
             case 2: {
