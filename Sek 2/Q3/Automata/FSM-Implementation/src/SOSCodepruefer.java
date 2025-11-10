@@ -20,13 +20,13 @@ public class SOSCodepruefer {
             } break;
             case 1: {
                 switch (eingabe) {
-                    case '#' -> { 
+                    case '#' : { 
                         zustand = 11;
                     }
-                    case '-' -> {
+                    case '-' : {
                         zustand = 0;
                     }
-                    case '.' -> {
+                    case '.' : {
                         zustand = 2;
                     }
                 }
@@ -154,7 +154,23 @@ public class SOSCodepruefer {
                     }
                     break;
                     case '.' : {
+                        zustand = 9;
+                    }
+                    break;
+                }
+            } break;
+            case 11: {
+                switch (eingabe) {
+                    case '#' : {
+                        zustand = 11;
+                    }
+                    break;
+                    case '-' : {
                         zustand = 0;
+                    }
+                    break;
+                    case '.' : {
+                        zustand = 1;
                     }
                     break;
                 }

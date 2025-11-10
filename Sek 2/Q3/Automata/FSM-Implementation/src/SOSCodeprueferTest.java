@@ -4,13 +4,12 @@ public class SOSCodeprueferTest {
         SOSCodepruefer pruefer = new SOSCodepruefer();
 
         String[] testfaelle = {
-            "...---...",     // korrektes SOS
-            "..--..--",      // falsch
-            "...---..",      // unvollständig
-            "-...---...",    // anderes Zeichen davor
-            "...---...--..", // Zeichen danach
-            "",              // leerer String
-            "...---...#"     // Abbruchzeichen am Ende
+            "#...---...#",     // korrektes SOS
+            "#..--..--#",      // falsch
+            "#...---..#",      // unvollständig
+            "#-...---...#",    // anderes Zeichen davor
+            "#...---...--..#", // Zeichen danach
+            "#",              // leerer String
         };
 
         for (String text : testfaelle) {
