@@ -1,0 +1,328 @@
+===============================================================================
+HASKELL - LISTEN-EINFÜHRUNG (An intro to lists)
+Aufgabe 1
+Datum: 15. Januar 2026
+===============================================================================
+
+===============================================================================
+1. GRUNDLAGEN VON LISTEN
+===============================================================================
+
+THEORIE:
+- Listen sind homogene Datenstrukturen (alle Elemente müssen vom gleichen Typ sein)
+- Listen werden mit eckigen Klammern [] dargestellt
+- Elemente werden durch Kommas getrennt
+- Strings sind Listen von Zeichen: "hello" = ['h','e','l','l','o']
+
+ÜBUNG 1.1: Einfache Listen erstellen
+-------------------------------------
+Beispiel aus Dokumentation:
+ghci> lostNumbers = [4,8,15,16,23,42]
+ghci> lostNumbers
+[4,8,15,16,23,42]
+
+ÜBUNG 1.2: Listen mit verschiedenen Typen testen
+-------------------------------------------------
+Test: Was passiert bei [1,2,'a',3,'b','c',4]?
+Erwartung: 
+Ergebnis:
+Notizen:
+
+
+===============================================================================
+2. LISTEN ZUSAMMENFÜGEN (++)
+===============================================================================
+
+THEORIE:
+- Der ++ Operator fügt zwei Listen zusammen
+- Haskell muss die gesamte linke Liste durchlaufen (langsam bei langen Listen)
+- Kann auch bei Strings verwendet werden
+
+ÜBUNG 2.1: Listen mit ++ zusammenfügen
+---------------------------------------
+Beispiel aus Dokumentation:
+ghci> [1,2,3,4] ++ [9,10,11,12]
+[1,2,3,4,9,10,11,12]
+
+Eigene Tests mit anderen Zahlen:
+Test 1:
+ghci> 
+Ergebnis:
+
+Test 2:
+ghci> 
+Ergebnis:
+
+Notizen:
+
+
+ÜBUNG 2.2: Strings mit ++ zusammenfügen
+----------------------------------------
+Beispiel aus Dokumentation:
+ghci> "hello" ++ " " ++ "world"
+"hello world"
+
+Eigene Tests:
+Test 1:
+ghci> 
+Ergebnis:
+
+Test 2:
+ghci> 
+Ergebnis:
+
+Notizen:
+
+
+===============================================================================
+3. CONS OPERATOR (:)
+===============================================================================
+
+THEORIE:
+- Der : Operator fügt ein Element an den Anfang einer Liste
+- Ist instantan (sehr schnell)
+- Syntax: element : liste
+- [1,2,3] ist syntaktischer Zucker für 1:2:3:[]
+
+ÜBUNG 3.1: Elemente an den Anfang hinzufügen
+---------------------------------------------
+Beispiel aus Dokumentation:
+ghci> 'A':" SMALL CAT"
+"A SMALL CAT"
+ghci> 5:[1,2,3,4,5]
+[5,1,2,3,4,5]
+
+Eigene Tests:
+Test 1:
+ghci> 
+Ergebnis:
+
+Test 2:
+ghci> 
+Ergebnis:
+
+Test 3 (Liste mit : aufbauen):
+ghci> 
+Ergebnis:
+
+Notizen:
+
+
+===============================================================================
+4. LISTENINDIZIERUNG (!!)
+===============================================================================
+
+THEORIE:
+- !! greift auf ein Element über seinen Index zu
+- Indizes beginnen bei 0
+- Vorsicht: Fehler wenn Index außerhalb der Liste
+
+ÜBUNG 4.1: Elemente über Index abrufen
+---------------------------------------
+Beispiel aus Dokumentation:
+ghci> "Steve Buscemi" !! 6
+'B'
+ghci> [9.4,33.2,96.2,11.2,23.25] !! 1
+33.2
+
+Eigene Tests:
+Test 1:
+ghci> 
+Ergebnis:
+
+Test 2:
+ghci> 
+Ergebnis:
+
+Test 3 (Fehlerfall):
+ghci> 
+Ergebnis:
+
+Notizen:
+
+
+===============================================================================
+5. VERSCHACHTELTE LISTEN
+===============================================================================
+
+THEORIE:
+- Listen können Listen enthalten
+- Alle inneren Listen können unterschiedliche Längen haben
+- Aber alle müssen vom gleichen Typ sein
+
+ÜBUNG 5.1: Listen in Listen
+----------------------------
+Beispiel aus Dokumentation:
+ghci> b = [[1,2,3,4],[5,3,3,3],[1,2,2,3,4],[1,2,3]]
+ghci> b ++ [[1,1,1,1]]
+[[1,2,3,4],[5,3,3,3],[1,2,2,3,4],[1,2,3],[1,1,1,1]]
+ghci> [6,6,6]:b
+[[6,6,6],[1,2,3,4],[5,3,3,3],[1,2,2,3,4],[1,2,3]]
+
+Eigene Tests:
+Test 1:
+ghci> 
+Ergebnis:
+
+Test 2:
+ghci> 
+Ergebnis:
+
+Notizen:
+
+
+===============================================================================
+6. LISTEN VERGLEICHEN
+===============================================================================
+
+THEORIE:
+- Listen werden lexikographisch verglichen
+- Erst werden die ersten Elemente verglichen, dann die zweiten, usw.
+
+ÜBUNG 6.1: Listen vergleichen
+------------------------------
+Beispiele aus Dokumentation:
+ghci> [3,2,1] > [2,1,0]
+True
+ghci> [3,4,2] > [3,4]
+True
+
+Eigene Tests:
+Test 1:
+ghci> 
+Ergebnis:
+
+Test 2:
+ghci> 
+Ergebnis:
+
+Test 3:
+ghci> 
+Ergebnis:
+
+Notizen:
+
+
+===============================================================================
+7. LISTEN-FUNKTIONEN
+===============================================================================
+
+THEORIE:
+head - gibt das erste Element zurück
+tail - gibt alles außer dem ersten Element zurück
+last - gibt das letzte Element zurück
+init - gibt alles außer dem letzten Element zurück
+
+ÜBUNG 7.1: head, tail, last, init
+----------------------------------
+Beispiele aus Dokumentation:
+ghci> head [5,4,3,2,1]
+5
+ghci> tail [5,4,3,2,1]
+[4,3,2,1]
+ghci> last [5,4,3,2,1]
+1
+ghci> init [5,4,3,2,1]
+[5,4,3,2]
+
+Eigene Tests:
+Liste: [10,20,30,40,50]
+ghci> head 
+Ergebnis:
+
+ghci> tail 
+Ergebnis:
+
+ghci> last 
+Ergebnis:
+
+ghci> init 
+Ergebnis:
+
+Test mit eigener Liste:
+ghci> 
+Ergebnis:
+
+Notizen:
+
+
+ÜBUNG 7.2: Leere Listen - Fehlerbehandlung
+-------------------------------------------
+Test: Was passiert bei head []?
+ghci> 
+Ergebnis:
+Notizen:
+
+
+===============================================================================
+8. WEITERE LISTEN-FUNKTIONEN
+===============================================================================
+
+THEORIE:
+length - gibt die Länge zurück
+null - prüft ob Liste leer ist
+reverse - kehrt Liste um
+take - nimmt n Elemente vom Anfang
+drop - entfernt n Elemente vom Anfang
+
+ÜBUNG 8.1: length, null, reverse
+---------------------------------
+Beispiele aus Dokumentation:
+ghci> length [5,4,3,2,1]
+5
+ghci> null [1,2,3]
+False
+ghci> reverse [5,4,3,2,1]
+[1,2,3,4,5]
+
+
+ÜBUNG 8.2: take und drop
+-------------------------
+Beispiele aus Dokumentation:
+ghci> take 3 [5,4,3,2,1]
+[5,4,3]
+ghci> drop 3 [8,4,2,1,5,6]
+[1,5,6]
+
+===============================================================================
+9. MATHEMATISCHE LISTEN-FUNKTIONEN
+===============================================================================
+
+THEORIE:
+maximum - größtes Element
+minimum - kleinstes Element
+sum - Summe aller Elemente
+product - Produkt aller Elemente
+
+ÜBUNG 9.1: maximum und minimum
+-------------------------------
+Beispiele aus Dokumentation:
+ghci> maximum [1,9,2,3,4]
+9
+ghci> minimum [8,4,2,1,5,6]
+1
+
+
+ÜBUNG 9.2: sum und product
+---------------------------
+Beispiele aus Dokumentation:
+ghci> sum [5,2,1,6,3,2,5,7]
+31
+ghci> product [6,2,1,2]
+24
+
+===============================================================================
+10. ELEM - ELEMENT IN LISTE SUCHEN
+===============================================================================
+
+THEORIE:
+- elem prüft ob ein Element in einer Liste enthalten ist
+- Wird meist als Infix-Funktion verwendet (mit Backticks)
+
+ÜBUNG 10.1: elem verwenden
+---------------------------
+Beispiele aus Dokumentation:
+ghci> 4 `elem` [3,4,5,6]
+True
+ghci> 10 `elem` [3,4,5,6]
+False
