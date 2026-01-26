@@ -1,8 +1,8 @@
-public void quickSort(List<Integer> liste)
+public void quickSort(Liste<Integer> liste)
 {
     if (laenge(liste) < 1){
-        List<Integer> kleinere = new List<Integer>();
-        List<Integer> groessere = new List<Integer>();
+        Liste<Integer> kleinere = new Liste<Integer>();
+        Liste<Integer> groessere = new Liste<Integer>();
         liste.toFirst();
         int pivot = liste.getContent();
         liste.remove();
