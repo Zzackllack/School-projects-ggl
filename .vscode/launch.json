@@ -2,6 +2,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Gene",
+      "request": "launch",
+      "mainClass": "Gene",
+      "projectName": "School-projects-ggl_81dc49cb"
+    },
+    {
+      "type": "java",
       "name": "SOSCodeprueferTest",
       "request": "launch",
       "mainClass": "SOSCodeprueferTest",
