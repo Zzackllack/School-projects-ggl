@@ -2,6 +2,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "KartenspielTest",
+      "request": "launch",
+      "mainClass": "KartenspielTest",
+      "projectName": "School-projects-ggl_99fe64c5"
+    },
+    {
+      "type": "java",
       "name": "Gene",
       "request": "launch",
       "mainClass": "Gene",
