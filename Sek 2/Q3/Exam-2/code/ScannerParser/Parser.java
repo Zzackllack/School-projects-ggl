@@ -51,11 +51,33 @@ public class Parser {
 			return false;
 	}
 
+	// pruefeA kann in das hier refactorert werden:
+	public boolean pruefeA_1() {
+		if(!tokenliste.hasAccess()){
+			return false;
+		}
+		String tokenTyp = aktuellesToken.getTyp();
+		if (TOKENTYP_EGAL.equals(tokenTyp) || TOKENTYP_ENDE.equals(tokenTyp)) {
+			aktuellesToken = nextToken();
+			return pruefeB();
+		} else {
+			return false;
+		}
+	}
+
 	public boolean pruefeB() {	
 		String tokenTyp = aktuellesToken.getTyp();
 		return tokenliste.hasAccess() && TOKENTYP_ENDE.equals(tokenTyp); 
 	}
 
+	// pruefeB kann in das hier refactorert werden:
+	public boolean pruefeB_1() {
+		if(!tokenliste.hasAccess()){
+			return false;
+		}
+		String tokenTyp = aktuellesToken.getTyp();
+		return TOKENTYP_ENDE.equals(tokenTyp);
+	}
 
 }
 
