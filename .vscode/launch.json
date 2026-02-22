@@ -2,6 +2,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "EinkaufslisteTest",
+      "request": "launch",
+      "mainClass": "EinkaufslisteTest",
+      "projectName": "School-projects-ggl_99fe64c5"
+    },
+    {
+      "type": "java",
       "name": "KartenspielTest",
       "request": "launch",
       "mainClass": "KartenspielTest",
