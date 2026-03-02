@@ -5,7 +5,7 @@ a) Gegeben sind die Klassen Knoten und Graph_Matrix. In der Klasse Graph_Matrix 
 
 ```java
 public void tiefenSuche(String startBezeichner){…}
-````
+```
 
 Voraussetzung: Analysieren Sie zuerst die Methode besuchen aus der Klasse Graph_Matrix und führen Sie einen Testdurchlauf auf Papier durch.
 
