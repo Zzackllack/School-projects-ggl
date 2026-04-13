@@ -2,6 +2,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Test_Graph_Matrix",
+      "request": "launch",
+      "mainClass": "Test_Graph_Matrix",
+      "projectName": "School-projects-ggl_99fe64c5"
+    },
+    {
+      "type": "java",
       "name": "Einkaufszettel",
       "request": "launch",
       "mainClass": "Einkaufszettel",
