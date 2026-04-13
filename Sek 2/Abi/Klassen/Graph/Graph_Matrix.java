@@ -67,13 +67,12 @@ public class Graph_Matrix {
      * 
      */
     private int knotenNummer(String bezeichner) {
-        int i, ergeb;
-        ergeb = NICHTVORHANDEN;
-        for (i = 0; (i < anzahlKnoten) && (ergeb == NICHTVORHANDEN); i++)
-            if (knoten[i].BezeichnungGeben().equals(bezeichner))
-                ergeb = i;
-
-        return ergeb;
+        for (int i = 0; i < anzahlKnoten; i++) {
+            if (knoten[i].BezeichnungGeben().equals(bezeichner)) {
+                return i;
+            }
+        }
+        return NICHTVORHANDEN;
     }
 
     /**
@@ -90,15 +89,15 @@ public class Graph_Matrix {
             return "";
     }
 
-    public void kanteEinfuegen(String von, String nach, int gewichtung) {
-        int vonNummer, nachNummer;
-        vonNummer = knotenNummer(von);
-        nachNummer = knotenNummer(nach);
-        if ((vonNummer != NICHTVORHANDEN) && (nachNummer != NICHTVORHANDEN)) {
-            // Symmetrie, da ungerichteter Graph
-            matrix[vonNummer][nachNummer] = gewichtung;
-            matrix[nachNummer][vonNummer] = gewichtung;
-        }
+    public void kanteEinfuegen(String von, String nach, int gewicht) {
+        int i = knotenNummer(von);
+        int j = knotenNummer(nach);
+
+        if (i == NICHTVORHANDEN || j == NICHTVORHANDEN)
+            return;
+
+        matrix[i][j] = gewicht;
+        matrix[j][i] = gewicht; // ungerichtet
     }
 
     /**
@@ -156,32 +155,6 @@ public class Graph_Matrix {
             return UNVERBUNDEN;
     }
 
-    /**
-     * Besucht einen Knoten
-     * und besucht dann alle von diesem Knoten ausgehenden Knoten
-     * sofern diese noch nicht besucht wurden.
-     * 
-     * @param knotenNummer Knotennummer des zu besuchenden Knotens
-     * 
-     */
-    private void besuchen(int knotenNummer) {
-        // aktiven Knoten auf besucht setzen und in der Konsole ausgeben
-        besucht[knotenNummer] = true;
-        System.out.print("besucht " + knoten[knotenNummer].BezeichnungGeben() + "; ");
-
-        // in der Matrix die Zeile des aktiven Knotens nach Kanten durchforsten
-        for (int abzweigNummer = 0; abzweigNummer < anzahlKnoten; abzweigNummer++) {
-            // es gibt eine Kante und deren Zeilknoten ist noch nicht besucht
-            if ((matrix[knotenNummer][abzweigNummer] > 0) && !(besucht[abzweigNummer])) {
-                besuchen(abzweigNummer);
-                System.out.print("zurück nach " + knoten[knotenNummer].BezeichnungGeben() + "; ");
-            }
-        }
-
-        // der aktive Knoten mit der knotenNummer ist fertig bearbeitet
-        System.out.println("fertig mit " + knoten[knotenNummer].BezeichnungGeben() + "; ");
-    }
-
     private int minKnoten() {
         int minDistanzIndex = 0;
         int minDistanz = Integer.MAX_VALUE;
@@ -196,6 +169,7 @@ public class Graph_Matrix {
         return minDistanzIndex;
     }
 
+    // Unwichtig für Klausur, kommt nicht dran
     public void kuerzesterWeg(String startKnoten, String zielKnoten) {
         int startNummer = knotenNummer(startKnoten);
         int zielNummer = knotenNummer(zielKnoten);
@@ -253,16 +227,41 @@ public class Graph_Matrix {
         System.out.println("Weg: " + pfad);
     }
 
-    public void tiefenSuche(String startBezeichner) {
-        int knotenNummer = knotenNummer(startBezeichner);
-        if (knotenNummer == NICHTVORHANDEN) {
-            System.err.println("Knoten nicht vorhanden!");
+
+    // Wichtig für Klausur, kommt dran
+    public void tiefenSuche(String start) {
+        int startIndex = knotenNummer(start);
+        if (startIndex == NICHTVORHANDEN) {
+            System.out.println("Knoten nicht vorhanden");
+            return;
         }
 
         for (int i = 0; i < anzahlKnoten; i++) {
             besucht[i] = false;
         }
-        besuchen(knotenNummer);
 
+        besuchen(startIndex);
+    }
+    
+    // Wichtig für Klausur, kommt dran
+    /**
+     * Besucht einen Knoten
+     * und besucht dann alle von diesem Knoten ausgehenden Knoten
+     * sofern diese noch nicht besucht wurden.
+     * 
+     * @param knotenNummer Knotennummer des zu besuchenden Knotens
+     * 
+     */
+    private void besuchen(int i) {
+        besucht[i] = true;
+
+        for (int j = 0; j < anzahlKnoten; j++) {
+            boolean istNachbar = matrix[i][j] > 0;
+            boolean nochNichtBesucht = !besucht[j];
+
+            if (istNachbar && nochNichtBesucht) {
+                besuchen(j);
+            }
+        }
     }
 }
